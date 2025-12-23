@@ -34,6 +34,7 @@ async def generate_persona(stats: GithubStats) -> PersonaResult:
     - C-3PO: Documentation heavy, strict typing, procedural.
 
     Return the result as a JSON object with keys: character, title, summary, quote.
+    The 'summary' field MUST be concise and under 100 words.
     """
 
     response = model.generate_content(
